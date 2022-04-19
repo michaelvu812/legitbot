@@ -3,8 +3,6 @@ name: build
 on:
   pull_request:
   push:
-  schedule:
-  - cron: '29 6 * * 6'
 
 jobs:
   test:
@@ -13,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby: [ jruby, 2.5, 2.6, 2.7 ]
+        ruby: [ jruby, 2.6, 2.7, 3.0 ]
 
     steps:
     - uses: actions/checkout@v2
@@ -41,7 +39,7 @@ jobs:
 
     strategy:
       matrix:
-        ruby: [ 2.7 ]
+        ruby: [ 3.0 ]
 
     steps:
     - uses: actions/checkout@v2

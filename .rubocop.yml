@@ -1,3 +1,7 @@
+require:
+  - rubocop-minitest
+  - rubocop/cop/custom
+
 AllCops:
   CacheRootDirectory: 'vendor'
   NewCops: enable
@@ -8,3 +12,9 @@ Gemspec/RequiredRubyVersion:
 
 Naming/MemoizedInstanceVariableName:
   Enabled: false
+
+Style/MapToHash:
+  Enabled: false
+
+Custom/IpRanges:
+  Enabled: true
